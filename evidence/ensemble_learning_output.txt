@@ -1,0 +1,44 @@
+======================================================================
+MODULE 1 - ENSEMBLE LEARNING (Random Forest vs Gradient Boosting)
+======================================================================
+
+Dataset: Wine recognition | 178 samples, 13 features, 3 classes
+Train size: 133 | Test size: 45
+
+--- Test accuracy comparison ---
+Single Decision Tree            : 0.9556
+Random Forest (Bagging)         : 1.0000
+Gradient Boosting (Boosting)    : 0.9778
+
+--- 5-fold cross-validation accuracy (mean +/- std) ---
+Single Decision Tree    : 0.8654 +/- 0.0440
+Random Forest           : 0.9665 +/- 0.0207
+Gradient Boosting       : 0.9386 +/- 0.0321
+
+--- Top 5 most important features (Random Forest) ---
+color_intensity             : 0.1760
+flavanoids                  : 0.1688
+proline                     : 0.1513
+alcohol                     : 0.1276
+hue                         : 0.0951
+
+--- Classification report: Random Forest (Bagging) (best on test set) ---
+              precision    recall  f1-score   support
+
+     class_0       1.00      1.00      1.00        15
+     class_1       1.00      1.00      1.00        18
+     class_2       1.00      1.00      1.00        12
+
+    accuracy                           1.00        45
+   macro avg       1.00      1.00      1.00        45
+weighted avg       1.00      1.00      1.00        45
+
+--- Confusion matrix ---
+[[15  0  0]
+ [ 0 18  0]
+ [ 0  0 12]]
+
+======================================================================
+CONCLUSION
+======================================================================
+Both ensemble methods outperform a single decision tree, confirming the core idea of ensemble learning: combining multiple weak/variable learners produces a stronger, more stable model than any one learner alone. Random Forest reduces variance via bagging + feature randomness; Gradient Boosting reduces bias by sequentially correcting prior errors.

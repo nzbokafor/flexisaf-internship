@@ -1,0 +1,46 @@
+======================================================================
+MODULE 1 - HYPERPARAMETER OPTIMIZATION (GridSearchCV on an SVM)
+======================================================================
+
+Dataset: Breast cancer diagnostic | 569 samples, 30 features, binary classification
+Train size: 426 | Test size: 143
+
+Baseline SVM (default hyperparameters) test accuracy: 0.9790
+Default hyperparameters used: {'C': 1.0, 'break_ties': False, 'cache_size': 200, 'class_weight': None, 'coef0': 0.0, 'decision_function_shape': 'ovr', 'degree': 3, 'gamma': 'scale', 'kernel': 'rbf', 'max_iter': -1, 'probability': False, 'random_state': None, 'shrinking': True, 'tol': 0.001, 'verbose': False}
+
+Search space: 32 hyperparameter combinations, 5-fold cross-validation each (160 total model fits)
+Grid search completed in 1.83 seconds
+
+Best cross-validation accuracy: 0.9765
+Best hyperparameters found: {'svm__C': 10, 'svm__gamma': 0.001, 'svm__kernel': 'rbf'}
+
+--- Before vs after tuning (test set) ---
+Baseline (default) accuracy : 0.9790
+Tuned (GridSearchCV) accuracy: 0.9790
+Improvement                 : +0.0000
+
+--- Classification report: tuned model ---
+              precision    recall  f1-score   support
+
+   malignant       0.98      0.96      0.97        53
+      benign       0.98      0.99      0.98        90
+
+    accuracy                           0.98       143
+   macro avg       0.98      0.98      0.98       143
+weighted avg       0.98      0.98      0.98       143
+
+--- Confusion matrix: tuned model ---
+[[51  2]
+ [ 1 89]]
+
+--- Top 5 hyperparameter combinations tried ---
+1. score=0.9765  params={'svm__C': 100, 'svm__gamma': 0.0001, 'svm__kernel': 'rbf'}
+2. score=0.9765  params={'svm__C': 10, 'svm__gamma': 0.001, 'svm__kernel': 'rbf'}
+3. score=0.9718  params={'svm__C': 1, 'svm__gamma': 0.01, 'svm__kernel': 'rbf'}
+4. score=0.9695  params={'svm__C': 100, 'svm__gamma': 0.001, 'svm__kernel': 'rbf'}
+5. score=0.9671  params={'svm__C': 0.1, 'svm__gamma': 0.0001, 'svm__kernel': 'linear'}
+
+======================================================================
+CONCLUSION
+======================================================================
+GridSearchCV replaces manual guesswork with a systematic, cross-validated search across the hyperparameter space, finding a combination of C, gamma and kernel that matches or improves on the untuned baseline while giving a defensible, reproducible reason for the final choice of hyperparameters.
