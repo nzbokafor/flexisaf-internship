@@ -1,0 +1,44 @@
+Loaded 20 texts from sample_texts.csv
+
+=== Step-by-step example (text_id 1) ===
+    text: @AirlineHelp My flight was DELAYED for 3 hours!!! Nobody told us anything... https://t.co/abc123
+   lower: @airlinehelp my flight was delayed for 3 hours!!! nobody told us anything... https://t.co/abc123
+ no_urls: @airlinehelp my flight was delayed for 3 hours!!! nobody told us anything... 
+   clean: airlinehelp my flight was delayed for 3 hours nobody told us anything
+
+=== Step-by-step example (text_id 4) ===
+    text: I've been waiting on hold for 45 minutes. This is ridiculous. www.example.com/complaints
+   lower: i've been waiting on hold for 45 minutes. this is ridiculous. www.example.com/complaints
+ no_urls: i've been waiting on hold for 45 minutes. this is ridiculous. 
+   clean: ive been waiting on hold for 45 minutes this is ridiculous
+
+=== Original vs cleaned (all rows) ===
+ text_id                                                                                             text                                                                        clean
+       1 @AirlineHelp My flight was DELAYED for 3 hours!!! Nobody told us anything... https://t.co/abc123        airlinehelp my flight was delayed for 3 hours nobody told us anything
+       2                       Thanks @BankSupport, the issue with my card is FIXED now. Great service :)         thanks banksupport the issue with my card is fixed now great service
+       3                  Why is the app crashing every time I open it?? Please fix this ASAP #frustrated why is the app crashing every time i open it please fix this asap frustrated
+       4         I've been waiting on hold for 45 minutes. This is ridiculous. www.example.com/complaints                   ive been waiting on hold for 45 minutes this is ridiculous
+       5                            Loving the new update! The dark mode looks amazing and runs smoothly.          loving the new update the dark mode looks amazing and runs smoothly
+       6                            @TelcoCare my data bundle disappeared after 2 days. I want a refund!!            telcocare my data bundle disappeared after 2 days i want a refund
+       7                    Customer service was friendly and helpful, they solved my problem in minutes.  customer service was friendly and helpful they solved my problem in minutes
+       8                             The delivery arrived broken. Very disappointed with the packaging :(             the delivery arrived broken very disappointed with the packaging
+       9          Can someone explain why I was charged twice?? Check https://support.example.com/billing                            can someone explain why i was charged twice check
+      10                                   Running late again... the trains are always delayed on Mondays                  running late again the trains are always delayed on mondays
+      11                               Best customer support ever! They called me back within 10 minutes.             best customer support ever they called me back within 10 minutes
+      12                                   My password reset link isn't working. Tried 5 times already!!!                    my password reset link isnt working tried 5 times already
+      13                             The agents were patient and explained everything clearly. Thank you!           the agents were patient and explained everything clearly thank you
+      14                     Ordered on Friday, still waiting. Tracking says it's stuck in the warehouse.     ordered on friday still waiting tracking says its stuck in the warehouse
+      15                                        Refund processed quickly, happy with how they handled it.                      refund processed quickly happy with how they handled it
+      16                          Terrible experience. The website keeps logging me out while I'm paying.         terrible experience the website keeps logging me out while im paying
+      17                            @AirlineHelp lost luggage again!! Third time this year. Unacceptable.             airlinehelp lost luggage again third time this year unacceptable
+      18                          Network has been down since morning in Abuja, is there an outage? #help         network has been down since morning in abuja is there an outage help
+      19                                     Great prices and fast shipping, will definitely order again.                   great prices and fast shipping will definitely order again
+      20                    The chatbot keeps repeating the same answer. I need to talk to a real person!  the chatbot keeps repeating the same answer i need to talk to a real person
+
+=== Unique tokens after each step ===
+    text: 184
+   lower: 177
+ no_urls: 174
+   clean: 167
+
+Saved all intermediate columns to evidence/cleaned_texts.csv
