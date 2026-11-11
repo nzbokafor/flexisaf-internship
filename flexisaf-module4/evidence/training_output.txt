@@ -1,0 +1,16 @@
+Training images: 60000, test images: 10000, classes: 10
+Epoch 1: loss 0.583, training accuracy 78.7%
+Epoch 2: loss 0.363, training accuracy 87.0%
+Epoch 3: loss 0.314, training accuracy 88.6%
+Test accuracy (unseen images): 89.1%
+Accuracy per class:
+  T-shirt/top  82.6%
+  Trouser      96.3%
+  Pullover     86.2%
+  Dress        89.7%
+  Coat         80.6%
+  Sandal       99.0%
+  Shirt        68.5%
+  Sneaker      95.7%
+  Bag          98.0%
+  Ankle boot   94.1%
